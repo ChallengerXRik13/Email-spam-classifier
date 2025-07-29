@@ -4,11 +4,10 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-import re
 
-# Download required NLTK resources (only the first time)
+# Download required NLTK resources (only stopwords, punkt not needed)
 nltk.download('stopwords')
-nltk.download('punkt')
+
 # Load trained model and vectorizer
 model = pickle.load(open('model.pkl', 'rb'))
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
@@ -16,11 +15,9 @@ tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 ps = PorterStemmer()
 
 def transform_text(text):
-    # Lowercase
     text = text.lower()
-    # Tokenize
-    text = nltk.word_tokenize(text)
-    # Remove special characters and stopwords, apply stemming
+    text = text.split()  # Native tokenizer instead of nltk.word_tokenize()
+
     y = []
     for word in text:
         if word.isalnum() and word not in stopwords.words('english') and word not in string.punctuation:
@@ -45,3 +42,4 @@ if st.button('Predict'):
             st.error("🚫 Spam Message")
         else:
             st.success("✅ Not a Spam Message")
+
