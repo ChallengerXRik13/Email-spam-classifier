@@ -36,15 +36,13 @@ This project demonstrates how to:
 
 ```
 .
-├── app.py                   # Main app file (for deployment)
-├── sms-spam-detection.ipynb # Exploratory Data Analysis + Model Training
-├── spam.csv                 # Dataset
-├── model.pkl                # Trained Naive Bayes model
-├── vectorizer.pkl           # TF-IDF vectorizer
-├── requirements.txt         # Project dependencies
-├── README.md                # This file
-└── setup.sh, Procfile       # For deployment
-```
+├── main.py # Streamlit app for classification
+├── sms-spam-detection.ipynb # Notebook: EDA + Model Training
+├── spam.csv # Dataset
+├── model.pkl # Trained Naive Bayes model
+├── vectorizer.pkl # TF-IDF vectorizer
+├── requirements.txt # Python dependencies
+├── README.md # You're here
 
 ---
 
