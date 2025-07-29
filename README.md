@@ -27,7 +27,7 @@ This project demonstrates how to:
 - 🧠 Scikit-learn
 - 🗣️ NLTK (text preprocessing)
 - 📈 TF-IDF for vectorization
-- 💻 Streamlit (or Flask/Gradio) for UI *(optional)*
+- 💻 Streamlit for UI 
 - 📦 Pickle for model persistence
 
 ---
