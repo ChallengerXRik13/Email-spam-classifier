@@ -8,7 +8,7 @@ import re
 
 # Download required NLTK resources (only the first time)
 nltk.download('stopwords')
-
+nltk.download('punkt')
 # Load trained model and vectorizer
 model = pickle.load(open('model.pkl', 'rb'))
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
